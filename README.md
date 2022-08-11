@@ -1,46 +1,102 @@
-# Getting Started with Create React App
+# react-skela
+React skeleton library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+- **Fully Customizable components:** Feel free to change the colors, sizes, animation type.
+- **Plug and play:** Use existing components or create a new one using basic react-skela (line, circle, square)
+- ⚛️ **Lightweight library** with **zero dependencies**.
 
-In the project directory, you can run:
+## Demo
+## [All React Skela examples](https://reactskela.netlify.app)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```sh
+npm i react-skela
+```
 
-### `npm test`
+```sh
+yarn add react-skela
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+## Base skeletons
+### 1. Line (Line is a default skeleton)
+```jsx
+import Skela from 'react-skela'
+<Skela />
+```
+![App Screenshot](https://i.postimg.cc/RZhHStHS/line.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. circle
+```jsx
+<Skela type="circle" />
+```
+![App Screenshot](https://i.postimg.cc/NfpXvDLC/circle.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. square
+```jsx
+<Skela type="square" />
+```
+![App Screenshot](https://i.postimg.cc/q78M4BjB/square.gif)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Inbuilt skeletons 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Table (Default 10 rows & 1 column)
+```jsx
+import { SkelaTable } from 'react-skela'
+<SkelaTable />
+```
+![App Screenshot](https://i.postimg.cc/gkJ7WMNn/table-row-only.gif)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Table with column
+```jsx
+import { SkelaTable } from 'react-skela'
+<SkelaTable cols={4} />
+```
+![App Screenshot](https://i.postimg.cc/rpdZrzvc/table-row-column.gif)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Card
+```jsx
+import { SkelaCard } from 'react-skela'
+<SkelaCard cardWidth="200px" cardHeight="300px" />
+```
+![App Screenshot](https://i.postimg.cc/JzZpQSpH/card-single.gif)
 
-## Learn More
+### Multiple Cards
+```jsx
+import { SkelaCard } from 'react-skela'
+<SkelaCard cardGap="10px" cradCount={4} squareWidth="250px" squareHeight="250px" />
+```
+![App Screenshot](https://i.postimg.cc/3RKfN9C4/card-multiple.gif)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Bars (default 4 bars with wave animation)
+```jsx
+import { SkelaBar } from 'react-skela'
+<SkelaBar />
+```
+![App Screenshot](https://i.postimg.cc/tJBKpwK4/bar-default.gif)
+
+### Color Bars
+```jsx
+import { SkelaBar } from 'react-skela'
+<SkelaBar color="#83d3b3" bars="8" barBaseWidth="600px" barBaseHeight="400px" />
+```
+![App Screenshot](https://i.postimg.cc/tJR00pmc/bar-colred.gif)
+
+### Animation Bars pulse (default is wave)
+```jsx
+import { SkelaBar } from 'react-skela'
+<SkelaBar animationType="pulse" bars="8" barBaseWidth="600px" barBaseHeight="400px" />
+```
+![App Screenshot](https://i.postimg.cc/1RMhGV81/bar-pulse-animation.gif)
+
+
+## License 
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
